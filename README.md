@@ -3,10 +3,8 @@
 Easily send Brevo transactional email and sms with Laravel notifier.
 
 [![Latest Version](https://img.shields.io/github/release/yieldstudio/laravel-brevo-notifier?style=flat-square)](https://github.com/yieldstudio/laravel-brevo-notifier/releases)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/yieldstudio/laravel-brevo-notifier/tests?style=flat-square)](https://github.com/yieldstudio/laravel-brevo-notifier/actions/workflows/tests.yml)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/yieldstudio/laravel-brevo-notifier/tests.yml?branch=main&style=flat-square)](https://github.com/yieldstudio/laravel-brevo-notifier/actions/workflows/tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/yieldstudio/laravel-brevo-notifier?style=flat-square)](https://packagist.org/packages/yieldstudio/laravel-brevo-notifier)
-
-> Major version zero (0.y.z) is for initial development. Anything MAY change at any time. The public API SHOULD NOT be considered stable.
 
 ## Installation
 
