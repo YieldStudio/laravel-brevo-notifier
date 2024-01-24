@@ -34,7 +34,7 @@ class BrevoService
         $this->http = Http::withHeaders([
             'accept' => 'application/json',
             'content-type' => 'application/json',
-            $identifier => $key,
+            'api-key' => $key,
         ])->baseUrl($this->host);
     }
 
