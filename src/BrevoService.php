@@ -48,7 +48,7 @@ class BrevoService
         $response = $this->http->post('/smtp/email', $email->toArray());
 
         if (! $response->successful()) {
-            throw new BrevoException('BrevoService:sendEmail() failed', $response->status());
+            throw new BrevoException($response->toPsrResponse());
         }
 
         return json_decode($response->body(), true);
@@ -65,7 +65,7 @@ class BrevoService
         $response = $this->http->post('/transactionalSMS/sms', $sms->toArray());
 
         if (! $response->successful()) {
-            throw new BrevoException('BrevoService:sendSms() failed', $response->status());
+            throw new BrevoException($response->toPsrResponse());
         }
 
         return json_decode($response->body(), true);
