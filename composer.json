@@ -59,7 +59,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "BrevoNotifierServiceProvider"
+                "YieldStudio\\LaravelBrevoNotifier\\BrevoNotifierServiceProvider"
             ]
         }
     },
