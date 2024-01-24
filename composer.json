@@ -1,0 +1,74 @@
+{
+    "name": "yieldstudio/laravel-brevo-notifier",
+    "description": "Easily send Brevo transactional email and sms with Laravel notifier.",
+    "type": "plugin",
+    "keywords": [
+        "yieldstudio",
+        "laravel",
+        "notifier",
+        "notification",
+        "brevo",
+        "email",
+        "sms"
+    ],
+    "homepage": "https://github.com/YieldStudio/laravel-brevo-notifier",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Hemery",
+            "email": "james@yieldstudio.fr",
+            "homepage": "https://yieldstudio.fr",
+            "role": "Developer"
+        },
+        {
+            "name": "David Tang",
+            "email": "david@yieldstudio.fr",
+            "homepage": "https://yieldstudio.fr",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1|^8.2",
+        "illuminate/database": "^9|^10",
+        "illuminate/support": "^9|^10"
+    },
+    "require-dev": {
+        "ciareis/bypass": "^1.0",
+        "friendsofphp/php-cs-fixer": "^3.8",
+        "orchestra/testbench": "^7.22|^8.1",
+        "pestphp/pest": "^1.21",
+        "phpunit/phpunit": "^9.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "YieldStudio\\LaravelBrevoNotifier\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "YieldStudio\\LaravelBrevoNotifier\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes",
+        "test": "vendor/bin/pest",
+        "post-autoload-dump": [
+            "@php ./vendor/bin/testbench package:discover --ansi"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BrevoNotifierServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
