@@ -15,7 +15,6 @@ Easily send Brevo transactional email and sms with Laravel notifier.
 Just define these environment variables:
 
 ```dotenv
-BREVO_IDENTIFIER=
 BREVO_KEY=
 MAIL_FROM_ADDRESS=
 MAIL_FROM_NAME=

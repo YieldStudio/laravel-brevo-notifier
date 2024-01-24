@@ -1,7 +1,6 @@
 <?php
 
 return [
-    'identifier' => env('BREVO_IDENTIFIER'),
     'key' => env('BREVO_KEY'),
     'emailFrom' => [
         'email' => env('MAIL_FROM_ADDRESS'),

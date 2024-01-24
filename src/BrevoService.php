@@ -17,7 +17,7 @@ class BrevoService
 
     protected ?string $smsFrom = null;
 
-    public function __construct(string $identifier, string $key, array $options = [])
+    public function __construct(string $key, array $options = [])
     {
         if (array_key_exists('host', $options)) {
             $this->host = $options['host'];

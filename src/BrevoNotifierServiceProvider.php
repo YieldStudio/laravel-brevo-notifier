@@ -22,13 +22,12 @@ class BrevoNotifierServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__ . '/../config/brevo.php', 'brevo');
 
         $this->app->bind(BrevoService::class, function () {
-            $identifier = config('brevo.identifier');
             $key = config('brevo.key');
             $emailFrom = config('brevo.emailFrom');
             $smsFrom = config('brevo.smsFrom');
             $options = config('brevo.options', []);
 
-            $instance = new BrevoService($identifier, $key, $options);
+            $instance = new BrevoService($key, $options);
 
             if (filled($emailFrom)) {
                 $instance->setEmailFrom($emailFrom);
