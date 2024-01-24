@@ -9,7 +9,6 @@ use Psr\Http\Message\ResponseInterface;
 
 final class BrevoException extends Exception
 {
-
     public function __construct(ResponseInterface $response, $notifiable)
     {
         $statusCode = $response->getStatusCode();
@@ -24,5 +23,4 @@ final class BrevoException extends Exception
 
         parent::__construct($message, $statusCode);
     }
-
 }
