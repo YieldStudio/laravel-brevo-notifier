@@ -8,7 +8,7 @@ Easily send Brevo transactional email and sms with Laravel notifier.
 
 ## Installation
 
-	composer require yieldstudio/laravel-brevo-notifier
+	composer require hulsia/laravel-brevo-notifier
 
 ## Configure
 
