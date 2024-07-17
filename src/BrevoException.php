@@ -14,7 +14,7 @@ final class BrevoException extends Exception
         $statusCode = $response->getStatusCode();
 
         $message = sprintf(
-            "Brevo responded with an error (%s), body : %s",
+            'Brevo responded with an error (%s), body : %s',
             $statusCode,
             $response->getBody()
         );

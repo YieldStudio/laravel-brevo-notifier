@@ -10,9 +10,7 @@ use Illuminate\Notifications\Notification;
 
 class BrevoEmailChannel
 {
-    public function __construct(protected readonly BrevoService $brevoService)
-    {
-    }
+    public function __construct(protected readonly BrevoService $brevoService) {}
 
     /**
      * @throws BrevoException
