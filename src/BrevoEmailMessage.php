@@ -7,16 +7,27 @@ namespace YieldStudio\LaravelBrevoNotifier;
 final class BrevoEmailMessage
 {
     public array $from = [];
+
     public array $to = [];
+
     public array $attachment = [];
+
     public array $bcc = [];
+
     public array $cc = [];
+
     public int $templateId;
+
     public ?string $subject = null;
+
     public ?string $htmlContent = null;
+
     public ?string $textContent = null;
+
     public ?array $replyTo = null;
+
     public ?array $headers = null;
+
     public ?array $params = null;
 
     public function from($name, $email = null): BrevoEmailMessage

@@ -12,7 +12,7 @@ class BrevoNotifierServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config' => config_path(),
+                __DIR__ . '/../config' => config_path(),
             ], 'config');
         }
     }

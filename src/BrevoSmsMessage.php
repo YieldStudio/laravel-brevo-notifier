@@ -7,11 +7,17 @@ namespace YieldStudio\LaravelBrevoNotifier;
 final class BrevoSmsMessage
 {
     public ?string $from = null;
+
     public string $to;
+
     public string $content;
+
     public string $type = 'transactional';
+
     public ?string $tag = null;
+
     public ?string $webUrl = null;
+
     public bool $unicodeEnabled = true;
 
     public function from(string $from): BrevoSmsMessage

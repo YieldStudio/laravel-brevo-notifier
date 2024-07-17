@@ -1,14 +1,21 @@
-# laravel-brevo-notifier
+<p align="center"><img src="./art/logo.svg" alt="Laravel Brevo Notifier Package Logo"></p>
 
-Easily send Brevo transactional email and sms with Laravel notifier.
+<p align="center">
+<a href="https://github.com/yieldstudio/laravel-brevo-notifier/actions/workflows/tests.yml"><img src="https://img.shields.io/github/actions/workflow/status/yieldstudio/laravel-brevo-notifier/tests.yml?branch=main&style=flat-square" alt="Build Status"></a>
+<a href="https://github.com/yieldstudio/laravel-brevo-notifier/releases"><img src="https://img.shields.io/github/release/yieldstudio/laravel-brevo-notifier?style=flat-square" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/yieldstudio/laravel-brevo-notifier"><img src="https://img.shields.io/packagist/dt/yieldstudio/laravel-brevo-notifier?style=flat-square" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/yieldstudio/laravel-brevo-notifier"><img src="https://img.shields.io/packagist/l/yieldstudio/laravel-brevo-notifier" alt="License"></a>
+</p>
 
-[![Latest Version](https://img.shields.io/github/release/yieldstudio/laravel-brevo-notifier?style=flat-square)](https://github.com/yieldstudio/laravel-brevo-notifier/releases)
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/yieldstudio/laravel-brevo-notifier/tests.yml?branch=main&style=flat-square)](https://github.com/yieldstudio/laravel-brevo-notifier/actions/workflows/tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/yieldstudio/laravel-brevo-notifier?style=flat-square)](https://packagist.org/packages/yieldstudio/laravel-brevo-notifier)
+Easily send Brevo transactional email and sms with Laravel.
 
 ## Installation
 
-	composer require yieldstudio/laravel-brevo-notifier
+You can install the package via composer:
+
+```bash
+composer require yieldstudio/laravel-brevo-notifier
+```
 
 ## Configure
 
@@ -21,9 +28,9 @@ MAIL_FROM_NAME=
 BREVO_SMS_SENDER=
 ```
 
-Make sure that MAIL_FROM_ADDRESS is an authenticated email on Brevo.
+Make sure that `MAIL_FROM_ADDRESS` is an authenticated email on Brevo. You can verify by logging in your Brevo account here https://app.brevo.com/senders
 
-BREVO_SMS_SENDER is limited to 11 for alphanumeric characters and 15 for numeric characters.
+`BREVO_SMS_SENDER` is limited to 11 for alphanumeric characters and 15 for numeric characters.
 
 You can publish the configuration file with:
 
@@ -32,6 +39,8 @@ php artisan vendor:publish --provider="YieldStudio\LaravelBrevoNotifier\BrevoNot
 ```
 
 ## Usage
+
+Now you can use the channel in your via() method inside the notification:
 
 ### Send email
 
@@ -61,20 +70,20 @@ class OrderConfirmation extends Notification
 }
 ```
 
-### Send sms
+### Send SMS
 
 ```php
 <?php
 
 namespace App\Notifications;
 
-use Illuminate\Notifications\Notification
+use Illuminate\Notifications\Notification;
 use YieldStudio\LaravelBrevoNotifier\BrevoSmsChannel;
 use YieldStudio\LaravelBrevoNotifier\BrevoSmsMessage;
 
 class OrderConfirmation extends Notification
 {
-    public function via()
+    public function via(): array
     {
         return [BrevoSmsChannel::class];
     }
