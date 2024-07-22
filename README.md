@@ -104,9 +104,9 @@ To run the tests, just run `composer install` and `composer test`.
 
 ## Contact us
 
-[<img src="https://github.com/user-attachments/assets/da9a38b2-fb3c-4581-957a-d3b520e32128" width="419px" />](https://www.yieldstudio.fr/contact)
+[<img src="https://github.com/YieldStudio/.github/blob/main/assets/banner.png" width="419px" />](https://www.yieldstudio.fr/contact)
 
-Our team at Yield Studio is ready to welcome you and make every interaction an exceptional experience. You can contact us.
+Our team at Yield Studio is ready to welcome you and make every interaction an exceptional experience. You can [contact us](https://www.yieldstudio.fr/contact).
 
 
 ## Changelog
