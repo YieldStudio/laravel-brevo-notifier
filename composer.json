@@ -25,19 +25,25 @@
             "email": "david@yieldstudio.fr",
             "homepage": "https://yieldstudio.fr",
             "role": "Developer"
+        },
+        {
+            "name": "Arthur Monney",
+            "email": "arthur.monney@yieldstudio.fr",
+            "homepage": "https://yieldstudio.fr",
+            "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.1|^8.2",
-        "illuminate/database": "^10|^11",
-        "illuminate/support": "^10|^11"
+        "illuminate/database": "^9|^10|^11",
+        "illuminate/support": "^9|^10|^11"
     },
     "require-dev": {
         "ciareis/bypass": "^1.0",
         "laravel/pint": "^1.16",
         "orchestra/testbench": "^7.22|^8.1",
         "pestphp/pest": "^2.34",
-        "phpunit/phpunit": "^10.5"
+        "phpunit/phpunit": "^9.5|^10.5"
     },
     "autoload": {
         "psr-4": {

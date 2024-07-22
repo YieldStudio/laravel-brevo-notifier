@@ -102,6 +102,13 @@ class OrderConfirmation extends Notification
 
 To run the tests, just run `composer install` and `composer test`.
 
+## Contact us
+
+[<img src="https://github.com/YieldStudio/.github/blob/main/assets/banner.png" width="419px" />](https://www.yieldstudio.fr/contact)
+
+Our team at Yield Studio is ready to welcome you and make every interaction an exceptional experience. You can [contact us](https://www.yieldstudio.fr/contact).
+
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
@@ -118,6 +125,7 @@ If you've found a bug regarding security please mail [contact@yieldstudio.fr](ma
 
 - [David Tang](https://github.com/dtangdev)
 - [James Hemery](https://github.com/jameshemery)
+- [Arthur Monney](https://github.com/mckenziearts)
 
 ## License
 
