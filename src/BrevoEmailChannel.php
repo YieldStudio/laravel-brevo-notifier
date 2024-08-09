@@ -15,10 +15,10 @@ class BrevoEmailChannel
     /**
      * @throws BrevoException
      */
-    public function send(Model|AnonymousNotifiable $notifiable, Notification $notification): void
+    public function send(Model|AnonymousNotifiable $notifiable, Notification $notification): array
     {
         $email = $notification->toBrevoEmail($notifiable); // @phpstan-ignore-line
 
-        $this->brevoService->sendEmail($email);
+        return $this->brevoService->sendEmail($email);
     }
 }
