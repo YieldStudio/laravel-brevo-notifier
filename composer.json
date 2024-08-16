@@ -41,7 +41,7 @@
     "require-dev": {
         "ciareis/bypass": "^1.0",
         "laravel/pint": "^1.16",
-        "orchestra/testbench": "^7.22|^8.1",
+        "orchestra/testbench": "^7.44|^8.25|^9.0",
         "pestphp/pest": "^2.34",
         "phpunit/phpunit": "^9.5|^10.5"
     },
