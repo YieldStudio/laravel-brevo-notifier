@@ -47,7 +47,7 @@ class BrevoService
             $email->from($options['emailFrom']);
         }
 
-        $templateResponse = $this->http->get('/smtp/templates/'. $email->templateId);
+        $templateResponse = $this->http->get('/smtp/templates/' . $email->templateId);
 
         if (! $templateResponse->successful()) {
             throw new BrevoException($templateResponse->toPsrResponse());
