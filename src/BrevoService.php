@@ -6,6 +6,7 @@ namespace YieldStudio\LaravelBrevoNotifier;
 
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Facades\Http;
+use YieldStudio\LaravelBrevoNotifier\Exceptions\BrevoException;
 
 class BrevoService
 {
@@ -45,6 +46,13 @@ class BrevoService
         } elseif (array_key_exists('emailFrom', $options)) {
             $email->from($options['emailFrom']);
         }
+
+        $templateResponse = $this->http->get('/smtp/templates/' . $email->templateId);
+
+        if (! $templateResponse->successful()) {
+            throw new BrevoException($templateResponse->toPsrResponse());
+        }
+
         $response = $this->http->post('/smtp/email', $email->toArray());
 
         if (! $response->successful()) {
