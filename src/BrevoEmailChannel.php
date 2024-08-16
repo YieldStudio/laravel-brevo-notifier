@@ -7,6 +7,7 @@ namespace YieldStudio\LaravelBrevoNotifier;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\AnonymousNotifiable;
 use Illuminate\Notifications\Notification;
+use YieldStudio\LaravelBrevoNotifier\Exceptions\BrevoException;
 
 class BrevoEmailChannel
 {
