@@ -4,6 +4,14 @@ All notable changes to `laravel-brevo-notifier` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## 1.0.2 - 2025-04-09
+
+### What's Changed
+
+* laravel 12 and php 8.4 by @mckenziearts in https://github.com/YieldStudio/laravel-brevo-notifier/pull/7
+
+**Full Changelog**: https://github.com/YieldStudio/laravel-brevo-notifier/compare/1.0.1...1.0.2
+
 ## 1.0.1 - 2024-07-22
 
 ### What's Changed
