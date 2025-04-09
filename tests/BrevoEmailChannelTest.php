@@ -12,7 +12,7 @@ it('send notification via BrevoEmailChannel should call BrevoService sendEmail m
     $mock = $this->mock(BrevoService::class)->shouldReceive('sendEmail')->once();
     $channel = new BrevoEmailChannel($mock->getMock());
 
-    $channel->send(new User(), new class extends Notification
+    $channel->send(new User, new class extends Notification
     {
         public function via()
         {
@@ -21,7 +21,7 @@ it('send notification via BrevoEmailChannel should call BrevoService sendEmail m
 
         public function toBrevoEmail(User $notifiable): BrevoEmailMessage
         {
-            return new BrevoEmailMessage();
+            return new BrevoEmailMessage;
         }
     });
 });
