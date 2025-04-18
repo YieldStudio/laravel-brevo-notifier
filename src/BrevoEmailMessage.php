@@ -161,9 +161,12 @@ final class BrevoEmailMessage
         $data = [
             'sender' => $this->from,
             'to' => $this->to,
-            'templateId' => $this->templateId,
             'params' => $this->params,
         ];
+
+        if (filled($this->subject)) {
+            $data['templateId'] = $this->templateId;
+        }
 
         if (filled($this->subject)) {
             $data['subject'] = $this->subject;
