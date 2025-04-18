@@ -1,5 +1,5 @@
 {
-    "name": "yieldstudio/laravel-brevo-notifier",
+    "name": "zenorta/laravel-brevo-notifier",
     "description": "Easily send Brevo transactional email and sms with Laravel notifier.",
     "type": "plugin",
     "keywords": [
