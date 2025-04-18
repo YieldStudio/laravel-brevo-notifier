@@ -164,7 +164,7 @@ final class BrevoEmailMessage
             'params' => $this->params,
         ];
 
-        if (filled($this->subject)) {
+        if (filled($this->templateId)) {
             $data['templateId'] = $this->templateId;
         }
 
