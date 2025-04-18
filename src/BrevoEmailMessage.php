@@ -16,7 +16,7 @@ final class BrevoEmailMessage
 
     public array $cc = [];
 
-    public int $templateId;
+    public ?int $templateId = null;
 
     public ?string $subject = null;
 
