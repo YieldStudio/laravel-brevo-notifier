@@ -13,4 +13,14 @@ abstract class TestCase extends Orchestra
     {
         return [BrevoNotifierServiceProvider::class];
     }
+
+    protected function defineEnvironment($app): void
+    {
+        $app['config']->set('brevo.key', 'test-key');
+        $app['config']->set('brevo.emailFrom', [
+            'email' => 'noreply@example.com',
+            'name' => 'Example',
+        ]);
+        $app['config']->set('brevo.smsFrom', 'EXAMPLE');
+    }
 }

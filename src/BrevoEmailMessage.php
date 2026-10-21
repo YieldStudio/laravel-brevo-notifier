@@ -16,7 +16,7 @@ final class BrevoEmailMessage
 
     public array $cc = [];
 
-    public int $templateId;
+    public ?int $templateId = null;
 
     public ?string $subject = null;
 
@@ -170,9 +170,11 @@ final class BrevoEmailMessage
         $data = [
             'sender' => $this->from,
             'to' => $this->to,
-            'templateId' => $this->templateId,
-            'params' => $this->params,
         ];
+
+        if ($this->templateId !== null) {
+            $data['templateId'] = $this->templateId;
+        }
 
         if (filled($this->subject)) {
             $data['subject'] = $this->subject;
