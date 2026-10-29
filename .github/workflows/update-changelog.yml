@@ -4,6 +4,10 @@ on:
   release:
     types: [ released ]
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -20,9 +24,20 @@ jobs:
           latest-version: ${{ github.event.release.name }}
           release-notes: ${{ github.event.release.body }}
 
-      - name: Commit updated CHANGELOG
+      - name: Commit updated CHANGELOG to a dedicated branch
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          branch: main
-          commit_message: Update CHANGELOG
+          commit_message: "Update CHANGELOG for ${{ github.event.release.name }}"
           file_pattern: CHANGELOG.md
+          branch: changelog/${{ github.event.release.tag_name }}
+          create_branch: true
+
+      - name: Open pull request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr create \
+            --base main \
+            --head "changelog/${{ github.event.release.tag_name }}" \
+            --title "Update CHANGELOG for ${{ github.event.release.name }}" \
+            --body "Automated CHANGELOG update for [${{ github.event.release.name }}](${{ github.event.release.html_url }})."
